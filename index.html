@@ -260,7 +260,7 @@
   .stat-item:hover { background: rgba(110,193,228,0.05); }
   .stat-num {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.2rem; font-weight: 500;
+    font-size: 2.1rem; font-weight: 500;
     color: var(--sky); line-height: 1; display: block;
   }
   .stat-label {
@@ -735,6 +735,26 @@
   html, body { overflow-x: hidden; }
   img { max-width: 100%; height: auto; }
 
+
+  /* Safe area — notched phones (iPhone X+) */
+  @supports (padding: env(safe-area-inset-left)) {
+    .hero, .cta-section, .results-strip {
+      padding-left: max(5%, env(safe-area-inset-left));
+      padding-right: max(5%, env(safe-area-inset-right));
+    }
+    .container {
+      padding-left: max(5%, env(safe-area-inset-left));
+      padding-right: max(5%, env(safe-area-inset-right));
+    }
+  }
+  @media (max-width: 480px) {
+    @supports (padding: env(safe-area-inset-left)) {
+      .hero, .cta-section, .results-strip {
+        padding-left: max(4%, env(safe-area-inset-left));
+        padding-right: max(4%, env(safe-area-inset-right));
+      }
+    }
+  }
 </style>
 </head>
 <body>
@@ -743,7 +763,7 @@
 <div class="hero">
   <div class="container">
     <div class="tag-pill">Case Study · Global Life Sciences · Real-Time Laboratory Analytics</div>
-    <h1 class="t-hero"><em>AI-Driven Laboratory Analytics</em> Empowering Global Life Sciences with Real-Time Solutions</h1>
+    <h1 class="t-hero"><em>AI-Driven Lab Analytics</em> Enhancing Global Life Sciences with Real-Time Solutions</h1>
     <p class="hero-sub">A global life sciences organization operating high-throughput laboratory facilities across China and APAC needed real-time AI analytics integrated into laboratory workflows — without touching validated instrument control or compromising regulatory compliance. We Don't Just Build AI — We Incubate It.</p>
   </div>
 </div>
@@ -883,7 +903,7 @@
 <section class="cs-section cs-section-alt" aria-labelledby="governance-heading">
   <div class="container">
     <div class="section-label">System Boundary &amp; Governance</div>
-    <h2 id="governance-heading">Clear Lines Between AI and Validated Processes</h2>
+    <h2 id="governance-heading">Unlock the Power of AI: Navigating the Boundaries Between Innovation and Integrity</h2>
     <p>The platform focused on data ingestion, analytics, and operational support. Instrument control and safety-critical logic remained entirely unchanged. AI outputs were advisory only — final interpretation and decisions remained with laboratory researchers.</p>
 
     <div class="two-col">
@@ -945,9 +965,9 @@
 <div class="results-strip">
   <div class="results-strip-inner">
     <div class="result-tile">
-      <span class="result-big">7/10 &amp; 8/10</span>
-      <div class="result-desc">User Satisfaction Scores</div>
-      <div class="result-sub">China and APAC facilities</div>
+      <span class="result-big">8/10</span>
+      <div class="result-desc">User Satisfaction Score</div>
+      <div class="result-sub">APAC Facilities</div>
     </div>
     <div class="result-tile">
       <span class="result-big">Multi-Region</span>
@@ -978,7 +998,7 @@
 <section class="cs-section cs-section-alt" aria-labelledby="matters-heading">
   <div class="container">
     <div class="section-label">Why This Matters</div>
-    <h2 id="matters-heading">AI in Regulated Environments—No Need for Compromise</h2>
+    <h2 id="matters-heading">Unlock the potential of AI in regulated environments without sacrificing compliance.</h2>
     <p>Many organizations operating in regulated, real-time environments struggle to apply AI without introducing operational risk. This engagement shows that meaningful AI impact does not require loosening controls or replacing existing systems.</p>
     <p style="margin-top:1rem;">By respecting system boundaries, embedding analytics into real workflows, and preserving clear human ownership of decisions, organizations can scale AI in a way that is both practical and sustainable — moving beyond isolated experimentation to production environments where reliability and safety are non-negotiable.</p>
 
@@ -992,7 +1012,7 @@
 <section class="cs-section" aria-labelledby="faq-heading">
   <div class="container">
     <div class="section-label">Frequently Asked Questions</div>
-    <h2 id="faq-heading">Common Questions About AI in Life Sciences Laboratories</h2>
+    <h2 id="faq-heading">Common Questions About AI in Life Sciences</h2>
     <p>Answers to the questions research and operations leaders ask most when evaluating AI analytics for regulated laboratory environments.</p>
 
     <div class="faq-list" role="list">
